@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contabilidade Eloi | Confiança que Conecta • Resultados que Transformam</title>
+  <meta name="description" content="Contabilidade Eloi Ltda — escritório contábil tradicional em Divinópolis-MG. Organização, segurança e resultados para sua empresa." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* =========================================
+       RESET & VARIABLES
+    ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-dark:  #0d2b6e;
+      --blue-mid:   #1a4fad;
+      --blue-light: #2d7dd2;
+      --blue-sky:   #4fa3e3;
+      --gold:       #c9a84c;
+      --gold-light: #e8c97a;
+      --white:      #ffffff;
+      --gray-50:    #f8f9fb;
+      --gray-100:   #eef0f4;
+      --gray-200:   #d8dce6;
+      --gray-600:   #4a5568;
+      --gray-800:   #1a202c;
+      --font-head:  'Montserrat', sans-serif;
+      --font-body:  'Open Sans', sans-serif;
+      --shadow-sm:  0 2px 8px rgba(13,43,110,.10);
+      --shadow-md:  0 6px 24px rgba(13,43,110,.15);
+      --shadow-lg:  0 16px 48px rgba(13,43,110,.20);
+      --radius:     12px;
+      --transition: .35s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+    body  { font-family: var(--font-body); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+    img   { display: block; max-width: 100%; }
+    a     { text-decoration: none; color: inherit; }
+
+    /* =========================================
+       UTILITIES
+    ========================================= */
+    .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-tag {
+      display: inline-block; font-family: var(--font-head); font-size: .72rem;
+      font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--blue-light); margin-bottom: 12px;
+    }
+    .section-tag::before { content: "—  "; }
+    .section-tag::after  { content: "  —"; }
+    .section-title {
+      font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800; color: var(--blue-dark); line-height: 1.25;
+    }
+    .section-sub {
+      margin-top: 14px; font-size: 1.05rem; color: var(--gray-600); max-width: 560px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-head); font-weight: 700; font-size: .92rem;
+      letter-spacing: .04em; border: none; cursor: pointer;
+      border-radius: 50px; padding: 14px 30px; transition: var(--transition);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-mid));
+      color: var(--white); box-shadow: 0 4px 16px rgba(45,125,210,.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,125,210,.5); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,.6);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--blue-dark); box-shadow: 0 4px 16px rgba(201,168,76,.35);
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,.5); }
+
+    /* =========================================
+       TOPBAR
+    ========================================= */
+    .topbar {
+      background: var(--blue-dark); color: rgba(255,255,255,.8);
+      font-size: .8rem; padding: 8px 0;
+    }
+    .topbar .container {
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      align-items: center; gap: 8px;
+    }
+    .topbar a { color: rgba(255,255,255,.85); transition: color var(--transition); }
+    .topbar a:hover { color: var(--gold-light); }
+    .topbar-item { display: flex; align-items: center; gap: 6px; }
+    .topbar-item i { color: var(--gold-light); font-size: .8rem; }
+    .topbar-left  { display: flex; flex-wrap: wrap; gap: 20px; }
+    .topbar-right { display: flex; gap: 12px; }
+    .topbar-right a {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(255,255,255,.08); display: flex; align-items: center;
+      justify-content: center; transition: background var(--transition);
+    }
+    .topbar-right a:hover { background: var(--blue-light); color: var(--white); }
+
+    /* =========================================
+       NAVBAR
+    ========================================= */
+    .navbar {
+      position: sticky; top: 0; z-index: 1000;
+      background: #ffffff; box-shadow: 0 2px 8px rgba(13,43,110,.08);
+      padding: 0;
+    }
+    .navbar .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 130px;
+    }
+    .nav-logo img { height: 120px; width: auto; }
+    .nav-links {
+      display: flex; gap: 6px; align-items: center; list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-head); font-size: .85rem; font-weight: 600;
+      color: var(--gray-800); padding: 8px 14px; border-radius: 8px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover { background: var(--gray-100); color: var(--blue-mid); }
+    .nav-cta { margin-left: 10px; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 26px; height: 2px; background: var(--blue-dark);
+      border-radius: 2px; transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 0;
+      background: var(--white); border-top: 1px solid var(--gray-100);
+      padding: 12px 24px 20px;
+    }
+    .mobile-menu a {
+      font-family: var(--font-head); font-size: .9rem; font-weight: 600;
+      color: var(--gray-800); padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .mobile-menu.open { display: flex; }
+
+    /* =========================================
+       HERO
+    ========================================= */
+    .hero {
+      position: relative; min-height: 92vh; display: flex; align-items: center;
+      overflow: hidden; background: var(--blue-dark);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+      opacity: .18;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(13,43,110,.97) 40%, rgba(26,79,173,.75) 100%);
+    }
+    .hero .container { position: relative; z-index: 2; padding-top: 40px; padding-bottom: 60px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 50px; padding: 6px 16px;
+      font-family: var(--font-head); font-size: .75rem; font-weight: 700;
+      letter-spacing: .12em; color: var(--gold-light); text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow span { width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; }
+    .hero-title {
+      font-family: var(--font-head); font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 20px;
+    }
+    .hero-title em { color: var(--gold-light); font-style: normal; }
+    .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.75); max-width: 480px; margin-bottom: 36px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 52px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+      color: var(--gold-light); line-height: 1;
+    }
+    .stat-label { font-size: .82rem; color: rgba(255,255,255,.6); margin-top: 4px; }
+    .hero-visual { position: relative; }
+    .hero-img-wrap {
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-lg); position: relative;
+    }
+    .hero-img-wrap img { width: 100%; height: 480px; object-fit: cover; }
+    .hero-badge {
+      position: absolute; bottom: -20px; left: -20px;
+      background: var(--white); border-radius: var(--radius);
+      padding: 18px 22px; box-shadow: var(--shadow-md);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .hero-badge-icon {
+      width: 46px; height: 46px; background: linear-gradient(135deg, var(--blue-light), var(--blue-mid));
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.2rem; flex-shrink: 0;
+    }
+    .hero-badge-text { font-family: var(--font-head); }
+    .hero-badge-text strong { display: block; font-size: .95rem; color: var(--blue-dark); }
+    .hero-badge-text span { font-size: .78rem; color: var(--gray-600); }
+
+    /* =========================================
+       SERVICES STRIP
+    ========================================= */
+    .services-strip {
+      background: var(--white); padding: 64px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .strip-header { text-align: center; margin-bottom: 50px; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
+    }
+    .service-card {
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 32px 24px;
+      text-align: center; transition: var(--transition); cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-6px); box-shadow: var(--shadow-md);
+      border-color: var(--blue-sky); background: var(--white);
+    }
+    .service-icon {
+      width: 60px; height: 60px; border-radius: 14px; margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-sky));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.4rem;
+    }
+    .service-card h3 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 10px;
+    }
+    .service-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.65; }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+    .about { padding: 96px 0; background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-images { position: relative; }
+    .about-img-main {
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md);
+    }
+    .about-img-main img { width: 100%; height: 420px; object-fit: cover; }
+    .about-img-secondary {
+      position: absolute; bottom: -28px; right: -28px;
+      width: 55%; border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-lg); border: 4px solid var(--white);
+    }
+    .about-img-secondary img { width: 100%; height: 200px; object-fit: cover; }
+    .about-exp {
+      position: absolute; top: 24px; left: -24px;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+      color: var(--white); border-radius: var(--radius); padding: 20px 24px;
+      text-align: center; box-shadow: var(--shadow-md);
+    }
+    .about-exp strong { display: block; font-family: var(--font-head); font-size: 2.2rem; font-weight: 800; line-height: 1; }
+    .about-exp span   { font-size: .78rem; opacity: .85; }
+    .about-content { padding-left: 20px; }
+    .about-list { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+    .about-item { display: flex; align-items: flex-start; gap: 14px; }
+    .about-check {
+      width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-sky));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: .8rem; margin-top: 2px;
+    }
+    .about-item-text strong { display: block; font-family: var(--font-head); font-size: .9rem; font-weight: 700; color: var(--blue-dark); }
+    .about-item-text span { font-size: .87rem; color: var(--gray-600); }
+
+    /* =========================================
+       WHY US
+    ========================================= */
+    .why {
+      padding: 96px 0;
+      background: linear-gradient(160deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+      position: relative; overflow: hidden;
+    }
+    .why::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1400&q=60&auto=format&fit=crop') center/cover;
+      opacity: .06;
+    }
+    .why .container { position: relative; z-index: 2; }
+    .why-header { text-align: center; margin-bottom: 60px; }
+    .why-header .section-tag { color: var(--gold-light); }
+    .why-header .section-title { color: var(--white); }
+    .why-header .section-sub { color: rgba(255,255,255,.7); margin: 14px auto 0; }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+    }
+    .why-card {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px); border-radius: var(--radius); padding: 36px 28px;
+      transition: var(--transition);
+    }
+    .why-card:hover { background: rgba(255,255,255,.12); transform: translateY(-4px); }
+    .why-num {
+      font-family: var(--font-head); font-size: 3rem; font-weight: 800;
+      color: rgba(255,255,255,.08); line-height: 1; margin-bottom: 16px;
+    }
+    .why-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue-dark); font-size: 1.2rem; margin-bottom: 18px;
+    }
+    .why-card h3 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .why-card p { font-size: .88rem; color: rgba(255,255,255,.65); line-height: 1.7; }
+
+    /* =========================================
+       GALLERY STRIP
+    ========================================= */
+    .gallery { padding: 80px 0; background: var(--gray-50); }
+    .gallery-header { text-align: center; margin-bottom: 48px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 220px 220px;
+      gap: 16px; border-radius: var(--radius); overflow: hidden;
+    }
+    .gallery-item { overflow: hidden; position: relative; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(13,43,110,.5));
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* =========================================
+       PROCESS
+    ========================================= */
+    .process { padding: 96px 0; background: var(--white); }
+    .process-header { text-align: center; margin-bottom: 64px; }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: ''; position: absolute; top: 36px; left: 12%; right: 12%;
+      height: 2px; background: linear-gradient(90deg, var(--blue-light), var(--blue-sky));
+      z-index: 0;
+    }
+    .process-step { text-align: center; position: relative; z-index: 1; }
+    .process-circle {
+      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.3rem;
+      box-shadow: 0 4px 20px rgba(13,43,110,.3);
+    }
+    .process-step h4 {
+      font-family: var(--font-head); font-size: .92rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 8px;
+    }
+    .process-step p { font-size: .84rem; color: var(--gray-600); }
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+    .contact { padding: 96px 0; background: var(--gray-50); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-info h2 {
+      font-family: var(--font-head); font-size: 1.8rem; font-weight: 800;
+      color: var(--blue-dark); margin-bottom: 16px;
+    }
+    .contact-info p { color: var(--gray-600); margin-bottom: 36px; font-size: .95rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-sky));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.1rem;
+    }
+    .contact-item-text strong { display: block; font-family: var(--font-head); font-size: .88rem; font-weight: 700; color: var(--blue-dark); margin-bottom: 3px; }
+    .contact-item-text span, .contact-item-text a { font-size: .9rem; color: var(--gray-600); }
+    .contact-item-text a:hover { color: var(--blue-light); }
+    .wa-btn {
+      margin-top: 32px; display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: var(--white);
+      font-family: var(--font-head); font-weight: 700; font-size: .92rem;
+      padding: 14px 28px; border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
+      transition: var(--transition);
+    }
+    .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.5); }
+    .contact-form {
+      background: var(--white); border-radius: var(--radius);
+      padding: 40px 36px; box-shadow: var(--shadow-md);
+    }
+    .contact-form h3 {
+      font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 28px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; font-family: var(--font-head); font-size: .8rem;
+      font-weight: 600; color: var(--gray-600); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px; border: 1.5px solid var(--gray-200);
+      border-radius: 10px; font-family: var(--font-body); font-size: .92rem;
+      color: var(--gray-800); background: var(--gray-50);
+      transition: var(--transition); outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--blue-light); background: var(--white);
+      box-shadow: 0 0 0 3px rgba(45,125,210,.12);
+    }
+    .form-group textarea { height: 110px; resize: vertical; }
+
+    /* =========================================
+       MAP SECTION
+    ========================================= */
+    .map-section { background: var(--white); }
+    .map-section iframe { width: 100%; height: 380px; border: none; display: block; }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    footer {
+      background: var(--blue-dark); color: rgba(255,255,255,.75); padding: 64px 0 0;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; padding-bottom: 48px; }
+    .footer-brand img { height: 52px; margin-bottom: 18px; filter: brightness(0) invert(1); opacity: .9; }
+    .footer-brand p { font-size: .88rem; line-height: 1.75; max-width: 280px; }
+    .footer-brand .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .footer-brand .footer-social a {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.7); transition: var(--transition);
+    }
+    .footer-brand .footer-social a:hover { background: var(--blue-light); color: var(--white); border-color: transparent; }
+    .footer-col h4 {
+      font-family: var(--font-head); font-size: .82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em; color: var(--white);
+      margin-bottom: 20px; padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255,255,255,.1);
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: .87rem; color: rgba(255,255,255,.65); transition: color var(--transition);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .footer-col ul li a::before { content: '›'; color: var(--gold-light); font-size: 1rem; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-contact-list { display: flex; flex-direction: column; gap: 14px; }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; }
+    .footer-contact-item i { color: var(--gold-light); margin-top: 3px; font-size: .9rem; flex-shrink: 0; }
+    .footer-contact-item span { font-size: .87rem; color: rgba(255,255,255,.65); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08); padding: 20px 0;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 12px; font-size: .8rem; color: rgba(255,255,255,.4);
+    }
+    .footer-bottom a { color: var(--gold-light); }
+
+    /* =========================================
+       FLOAT WA BUTTON
+    ========================================= */
+    .float-wa {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      transition: var(--transition); animation: pulse-wa 2.5s infinite;
+    }
+    .float-wa:hover { transform: scale(1.12); }
+    @keyframes pulse-wa {
+      0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.5); }
+      50% { box-shadow: 0 4px 36px rgba(37,211,102,.8); }
+    }
+
+    /* =========================================
+       ANIMATIONS
+    ========================================= */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-images { display: none; }
+      .about-content { padding-left: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 768px) {
+      .topbar-left { gap: 12px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item.tall { grid-row: span 1; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .topbar { display: none; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== TOPBAR ===================== -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span class="topbar-item">
+        <i class="fas fa-map-marker-alt"></i>
+        Av. Antônio Olímpio de Morais, 545 – Sala 1107, Centro – Divinópolis-MG
+      </span>
+      <span class="topbar-item">
+        <i class="fas fa-clock"></i>
+        Seg–Sex: 08h às 18h
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="https://wa.me/5537988511369" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:contabilidadeeloi@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="#inicio">
+      <img src="LogoPrincipal.png" alt="Contabilidade Eloi" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5537988511369" target="_blank" class="btn btn-primary nav-cta">
+      <i class="fab fa-whatsapp"></i> Fale Conosco
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#contato">Contato</a>
+    <a href="https://wa.me/5537988511369" target="_blank" style="color:#25d366;border:none;padding-top:16px;">
+      <i class="fab fa-whatsapp"></i> WhatsApp: (37) 9 8851-1369
+    </a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span></span> Divinópolis–MG · Desde 1990
+        </div>
+        <h1 class="hero-title">
+          Sua empresa em <em>mãos seguras</em>,<br>
+          resultados que <em>transformam</em>
+        </h1>
+        <p class="hero-desc">
+          A Contabilidade Eloi oferece assessoria contábil, fiscal e trabalhista com organização,
+          transparência e dedicação total ao sucesso do seu negócio.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-gold">
+            <i class="fas fa-paper-plane"></i> Solicitar Consultoria
+          </a>
+          <a href="#servicos" class="btn btn-outline">
+            <i class="fas fa-list-ul"></i> Nossos Serviços
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">30+</div>
+            <div class="stat-label">Anos de tradição</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Clientes atendidos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Comprometimento</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Escritório de Contabilidade" />
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="hero-badge-text">
+            <strong>Segurança e Confiança</strong>
+            <span>CRC · MG – Registro ativo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services-strip" id="servicos">
+  <div class="container">
+    <div class="strip-header fade-up">
+      <div class="section-tag">O que fazemos</div>
+      <h2 class="section-title">Serviços Contábeis Completos</h2>
+      <p class="section-sub" style="margin:14px auto 0">
+        Soluções para empresas de todos os portes: do MEI à média empresa, do simples ao lucro real.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-book"></i></div>
+        <h3>Contabilidade Geral</h3>
+        <p>Escrituração contábil, Livro Diário, Livro Razão, balancetes e demonstrativos financeiros completos.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-receipt"></i></div>
+        <h3>Assessoria Fiscal</h3>
+        <p>Apuração de impostos (ICMS, ISS, PIS, COFINS, IRPJ, CSLL) e entrega de obrigações acessórias.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-users"></i></div>
+        <h3>Departamento Pessoal</h3>
+        <p>Folha de pagamento, admissões, demissões, FGTS, INSS, eSocial e gestão trabalhista completa.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Abertura de Empresas</h3>
+        <p>Registro, alvará, CNPJ, enquadramento tributário e toda burocracia para iniciar seu negócio.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Planejamento Tributário</h3>
+        <p>Análise do melhor regime tributário e estratégias legais para reduzir a carga de impostos.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3>Certidões e Regularização</h3>
+        <p>Certidões negativas, parcelamentos, regularizações junto à Receita Federal, Estadual e Municipal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80&auto=format&fit=crop" alt="Equipe Contabilidade Eloi" />
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&q=80&auto=format&fit=crop" alt="Documentos contábeis" />
+        </div>
+        <div class="about-exp">
+          <strong>30+</strong>
+          <span>anos de<br>experiência</span>
+        </div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="section-tag">Quem somos</div>
+        <h2 class="section-title">Tradição e modernidade a serviço do seu negócio</h2>
+        <p class="section-sub">
+          Fundada em Divinópolis-MG, a Contabilidade Eloi é referência regional em serviços contábeis,
+          combinando décadas de experiência com tecnologia de ponta para entregar segurança, organização
+          e resultados reais aos nossos clientes.
+        </p>
+        <div class="about-list">
+          <div class="about-item">
+            <div class="about-check"><i class="fas fa-check"></i></div>
+            <div class="about-item-text">
+              <strong>Equipe especializada e atualizada</strong>
+              <span>Profissionais registrados no CRC-MG, em constante atualização sobre legislação tributária e trabalhista.</span>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-check"><i class="fas fa-check"></i></div>
+            <div class="about-item-text">
+              <strong>Atendimento personalizado</strong>
+              <span>Cada empresa recebe atenção exclusiva — entendemos as particularidades do seu negócio.</span>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-check"><i class="fas fa-check"></i></div>
+            <div class="about-item-text">
+              <strong>Tecnologia e segurança digital</strong>
+              <span>Sistemas modernos de gestão contábil com backup em nuvem e total confidencialidade dos dados.</span>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-check"><i class="fas fa-check"></i></div>
+            <div class="about-item-text">
+              <strong>Transparência total</strong>
+              <span>Relatórios claros, prazos cumpridos e comunicação direta — sem surpresas para o cliente.</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="#contato" class="btn btn-primary">
+            <i class="fas fa-handshake"></i> Conheça nossa equipe
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="why" id="diferenciais">
+  <div class="container">
+    <div class="why-header fade-up">
+      <div class="section-tag">Por que nos escolher</div>
+      <h2 class="section-title">Nossos Diferenciais</h2>
+      <p class="section-sub">
+        Mais do que números: entregamos tranquilidade, organização e crescimento para o seu negócio.
+      </p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-num">01</div>
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Segurança Jurídica</h3>
+        <p>Cumprimento rigoroso de todas as obrigações legais, evitando multas, autuações e problemas com o fisco.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">02</div>
+        <div class="why-icon"><i class="fas fa-sitemap"></i></div>
+        <h3>Organização Total</h3>
+        <p>Escrituração em dia, documentos arquivados corretamente e relatórios gerenciais entregues no prazo.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">03</div>
+        <div class="why-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Foco em Resultados</h3>
+        <p>Planejamento tributário eficiente que reduz sua carga de impostos de forma legal e sustentável.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">04</div>
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <h3>Suporte Ágil</h3>
+        <p>Atendimento rápido por telefone, e-mail e WhatsApp — sua dúvida respondida no menor tempo possível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-header fade-up">
+      <div class="section-tag">Contabilidade de verdade</div>
+      <h2 class="section-title">O rigor do trabalho contábil</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&auto=format&fit=crop" alt="Livros contábeis" loading="lazy" />
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Análise financeira" loading="lazy" />
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80&auto=format&fit=crop" alt="Calculadora e documentos" loading="lazy" />
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80&auto=format&fit=crop" alt="Reunião de negócios" loading="lazy" />
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop" alt="Declaração fiscal" loading="lazy" />
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="process">
+  <div class="container">
+    <div class="process-header fade-up">
+      <div class="section-tag">Como trabalhamos</div>
+      <h2 class="section-title">Do primeiro contato à entrega</h2>
+      <p class="section-sub" style="margin:14px auto 0">Um processo simples, transparente e sem burocracia para o cliente.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="process-circle"><i class="fas fa-phone-alt"></i></div>
+        <h4>1. Contato Inicial</h4>
+        <p>Você entra em contato por telefone, e-mail ou WhatsApp — apresentamos nossa proposta gratuitamente.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-circle"><i class="fas fa-clipboard-list"></i></div>
+        <h4>2. Diagnóstico</h4>
+        <p>Analisamos a situação atual da sua empresa e identificamos o melhor enquadramento e serviços necessários.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-circle"><i class="fas fa-file-signature"></i></div>
+        <h4>3. Proposta e Contrato</h4>
+        <p>Apresentamos proposta clara e objetiva. Com sua aprovação, formalizamos o contrato e iniciamos os serviços.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-circle"><i class="fas fa-rocket"></i></div>
+        <h4>4. Acompanhamento</h4>
+        <p>Sua empresa é gerida com relatórios periódicos, prazos cumpridos e suporte contínuo da nossa equipe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px;" class="fade-up">
+      <div class="section-tag">Fale conosco</div>
+      <h2 class="section-title">Entre em Contato</h2>
+      <p class="section-sub" style="margin:14px auto 0">
+        Solicite uma consultoria gratuita. Estamos prontos para ajudar o seu negócio a crescer com segurança.
+      </p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h2>Contabilidade Eloi Ltda</h2>
+        <p>Escritório contábil em Divinópolis-MG com mais de 30 anos de história e confiança.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-item-text">
+              <strong>Endereço</strong>
+              <span>Av. Antônio Olímpio de Morais, 545 – Sala 1107<br>Centro – Divinópolis-MG – CEP 35.500-005</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-item-text">
+              <strong>Telefone / Fax</strong>
+              <a href="tel:+553732137751">(37) 3213-7751</a> &nbsp;|&nbsp;
+              <a href="tel:+553730165339">(37) 3016-5339</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-text">
+              <strong>E-mail</strong>
+              <a href="mailto:contabilidadeeloi@gmail.com">contabilidadeeloi@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-item-text">
+              <strong>Horário de Atendimento</strong>
+              <span>Segunda à Sexta: 08h às 18h</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/5537988511369?text=Olá!%20Gostaria%20de%20uma%20consultoria%20gratuita." target="_blank" class="wa-btn">
+          <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+          Chamar no WhatsApp agora
+        </a>
+      </div>
+      <div class="contact-form fade-up">
+        <h3><i class="fas fa-paper-plane" style="color:var(--blue-light);margin-right:8px;"></i>Solicite uma Consultoria Gratuita</h3>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(37) 9 0000-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico">
+              <option value="">Selecione um serviço...</option>
+              <option>Contabilidade Geral</option>
+              <option>Assessoria Fiscal</option>
+              <option>Departamento Pessoal</option>
+              <option>Abertura de Empresa</option>
+              <option>Planejamento Tributário</option>
+              <option>Certidões e Regularização</option>
+              <option>Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente sua necessidade..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Enviar via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MAP ===================== -->
+<div class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.2!2d-44.8551!3d-20.1386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20Ant%C3%B4nio%20Ol%C3%ADmpio%20de%20Morais%2C%20545%20-%20Divin%C3%B3polis%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Localização Contabilidade Eloi">
+  </iframe>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="LogoPrincipal.png" alt="Contabilidade Eloi" />
+        <p>
+          Confiança que conecta pessoas e empresas a resultados reais.
+          Mais de 30 anos de tradição em Divinópolis-MG, com ética, organização e comprometimento.
+        </p>
+        <div class="footer-social">
+          <a href="https://wa.me/5537988511369" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:contabilidadeeloi@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Contabilidade Geral</a></li>
+          <li><a href="#servicos">Assessoria Fiscal</a></li>
+          <li><a href="#servicos">Departamento Pessoal</a></li>
+          <li><a href="#servicos">Abertura de Empresas</a></li>
+          <li><a href="#servicos">Planejamento Tributário</a></li>
+          <li><a href="#servicos">Certidões</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Av. Antônio Olímpio de Morais, 545 – Sala 1107, Centro – Divinópolis-MG</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>(37) 3213-7751 | 3016-5339</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>(37) 9 8851-1369</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>contabilidadeeloi@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Contabilidade Eloi Ltda. Todos os direitos reservados.</span>
+      <span>CRC-MG · Divinópolis-MG · <a href="mailto:contabilidadeeloi@gmail.com">contabilidadeeloi@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOAT WA ===================== -->
+<a href="https://wa.me/5537988511369?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consultoria." target="_blank" class="float-wa" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit → WhatsApp
+  function submitForm(e) {
+    e.preventDefault();
+    const nome     = document.getElementById('nome').value;
+    const empresa  = document.getElementById('empresa').value;
+    const telefone = document.getElementById('telefone').value;
+    const servico  = document.getElementById('servico').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const text = encodeURIComponent(
+      `Olá! Vim pelo site da Contabilidade Eloi.\n\n` +
+      `*Nome:* ${nome}\n` +
+      `*Empresa:* ${empresa || '—'}\n` +
+      `*Telefone:* ${telefone}\n` +
+      `*Serviço:* ${servico || '—'}\n` +
+      `*Mensagem:* ${mensagem || '—'}`
+    );
+    window.open(`https://wa.me/5537988511369?text=${text}`, '_blank');
+  }
+
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.boxShadow = window.scrollY > 20
+      ? '0 4px 24px rgba(13,43,110,.15)'
+      : '0 2px 8px rgba(13,43,110,.10)';
+  });
+</script>
+</body>
+</html>
